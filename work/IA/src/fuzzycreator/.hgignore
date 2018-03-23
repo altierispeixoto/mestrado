@@ -1,0 +1,23 @@
+syntax: glob
+
+*.pyc
+*.orig
+
+*.blg
+*.log
+*.aux
+*.bib~*
+*.snm
+*.toc
+*.nav
+*.kate-swp
+*.backup
+
+.directory
+graveyard.py
+boost/*.cc
+
+
+build/*
+
+pfsm/fuzzy_sets/iaa_t1_fuzzy_set.py
