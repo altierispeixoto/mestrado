@@ -9,6 +9,7 @@ def generate_candidates(random, args):
     """Generate candidates (Leite,Suco)"""
     return random.randint(0, 800), random.randint(0, 750)
 
+
 def h1(candidate):
     """h1(L,S) = (max{0,(6*L+5*S)/100-60})/15"""
     return max(0, (6*candidate[0]+5*candidate[1])/100-60)/15
@@ -72,17 +73,19 @@ def constrained_tournament_selection(random, population, args):
 
 r = random.Random()
 r.seed(42)
+
 myec = ec.EvolutionaryComputation(r)
 myec.selector = constrained_tournament_selection
-#myec.variator = variators.gaussian_mutation
+
+# myec.variator = variators.gaussian_mutation
 myec.replacer = replacers.generational_replacement
 myec.terminator = terminators.evaluation_termination
 myec.observer = observers.stats_observer
 
 pop = myec.evolve(generator=generate_candidates,
                   evaluator=my_evaluator,
-                  pop_size=1000,
-                  num_selected=100,
+                  pop_size=500,
+                  num_selected=15,
                   constraint_func=my_constraint_function,
                   mutation_rate=0.5,
                   max_evaluations=2000)

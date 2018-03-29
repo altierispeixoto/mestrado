@@ -8,20 +8,25 @@ class PriorityQueue:
     def __init__(self):
         self._queue = []
         self._index = 0
+        self.set = set()
+
 
     def insert(self, item, priority):
         heapq.heappush(self._queue, (priority, self._index, item))
         self._index += 1
 
+
     def remove(self):
         return heapq.heappop(self._queue)[-1]
+
+    def list(self):
+        return self._queue
 
     def isEmpty(self):
         return len(self._queue) == 0
 
     def getSize(self):
         return self._index
-
 
 class Point:
     def __init__(self, x_init, y_init):
@@ -33,7 +38,7 @@ class Point:
     def y(self): return self.x
 
     def __repr__(self):
-        return "".join(["Point(", str(self.x), ",", str(self.y), ")"])# class that represents a node
+        return "".join(["Point(", str(self.x), ",", str(self.y), ")"])
 
 
 class Node:
@@ -47,6 +52,9 @@ class Node:
 
     def getPoint(self):
         return self.point
+
+    def __repr__(self):
+        return "".join(self.key)
 
 
 # class that represents a graph
@@ -79,16 +87,11 @@ class Graph:
     # function that checks if edge exists
     def existsEdge(self, edge):
         for e in self.edges:
-            # compares source's key, destionation's key and weight of edge
+            # compares source's key, destination's key and weight of edge
             if e[0].getKey() == edge[0].getKey() and \
                 e[1].getKey() == edge[1].getKey() and e[2] == edge[2]:
                 return True
         return False
-
-
-    # function that returns the path
-    def getPath(self):
-        return self.path
 
 
     def heuristic(self,a, b):
@@ -104,23 +107,34 @@ class Graph:
                 return node
         return None
 
-    # function that run the "A*" algorithm
+
+    def print_frontier_size(self, frontier):
+        print("Tamanho da fronteira {}".format(frontier.getSize()))
+
+    def is_in_frontier(self,frontier,node):
+        for f_cost, h_cost, current_node in frontier.list():
+            if node == current_node[0]:
+                print("nó {} já se encontra na fronteira".format(node))
+
     def executeAStar(self, inicio, objetivo):
 
         if not self.edges:
-            print('Error: graph not contains edges!!')
+            print('Erro: grafo não contem arestas!!')
         else:
 
             no_inicial = self.node_exists(inicio)
             no_objetivo = self.node_exists(objetivo)
+            explored = set()
 
-            # checks if both the nodes exists
+            # verifica se ambos os nós existem
             if no_inicial is not None and no_objetivo is not None:
 
-                if no_inicial == no_objetivo: # checks if are the same nodes
+                # verifica se é o mesmo nó
+                if no_inicial == no_objetivo:
                     return True
 
-                frontier = PriorityQueue() # creates a priority queue (min heap)
+                # cria a fronteira ( fila de prioridades ordenada por f(n))
+                frontier = PriorityQueue()
 
                 # calculates costs
                 g_cost, h_cost = 0, 0
@@ -130,6 +144,8 @@ class Graph:
 
                 while not frontier.isEmpty():
 
+                    self.print_frontier_size(frontier)
+
                     # a item of the queue is a 3-tuple: (current_node, g_cost, h_cost)
                     current_node, g_cost, h_cost = frontier.remove()
                     print("=========================================================")
@@ -137,23 +153,43 @@ class Graph:
 
                     if current_node.getKey() == no_objetivo.getKey():
                         print("Objetivo alcançado. {} ".format(current_node.getKey()))
-
                         print("Custo de {} --> {} [ f(n) = {}]".format(no_inicial.getKey(), no_objetivo.getKey(), (g_cost + h_cost)))
+                        print("Explorados : {} , {}".format(len(explored),list(explored).__str__()))
+
                         return True
 
-                    # gets all the successors of "current_node"
+
+                    # itera sobre todos os sucessores do nó atual
                     for successor in self.successors[current_node.getKey()]:
 
-                        destination, weight = successor # unpack 2-tuple successor
+                        destination, weight = successor
+
                         print("No sucessor de {} --> {}".format(current_node.getKey(), destination.getKey()))
+
+                        if destination in explored:
+                            print("{} está na lista de explorados".format(destination.getKey()))
+                        else:
+                            print("{} não está na lista de explorados".format(destination.getKey()))
 
                         # calculates costs
                         new_g_cost = g_cost + weight
                         h_cost = self.heuristic(no_objetivo, destination)
                         f_cost = new_g_cost + h_cost
-                        print("Custo de {} --> {} [ f(n) = {} ,g(n) = {},h(n) ={} ]".format(current_node.getKey(), destination.getKey(), f_cost, g_cost, h_cost))
 
-                        frontier.insert((destination, new_g_cost, h_cost), f_cost) # fronteira ordenada por f(n)
-                        print("inseriu {} na fronteira".format(destination.getKey()))
+                        print("Custo de {} --> {} [ f(n) = {} ,g(n) = {},h(n) ={} ]"
+                              .format(current_node.getKey(), destination.getKey(), f_cost, new_g_cost, h_cost))
+
+                        # fronteira ordenada por f(n)
+                        self.is_in_frontier(frontier, destination)
+
+                        frontier.insert((destination, new_g_cost, h_cost), f_cost)
+                        print("{} inserido na fronteira".format(destination.getKey()))
+                        print("-------------------------------------")
+
+                    explored.add(current_node)
+                    print("quantidade de nós explorados {} ".format(len(explored)))
+
             else:
                 print('Error: the node(s) not exists in the graph!!')
+
+
