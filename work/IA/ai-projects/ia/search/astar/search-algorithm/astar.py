@@ -58,6 +58,10 @@ class AStar:
         raise NotImplementedError
 
     @abstractmethod
+    def cost_between(self, n1, n2, speed_average):
+        raise NotImplementedError
+
+    @abstractmethod
     def neighbors(self, node):
         """For a given node, returns (or yields) the list of its neighbors.
          this method must be implemented in a subclass"""
@@ -78,7 +82,7 @@ class AStar:
         else:
             return reversed(list(_gen()))
 
-    def astar(self, start, goal, reversePath=False):
+    def astar(self, start, goal, reversePath=False,use_speed_average=False):
 
         closed_list = set()
         child_not_openset = set()
@@ -107,9 +111,9 @@ class AStar:
             current.closed = True
             closed_list.add(current)
 
-            for n, speed in self.neighbors(current.data):
+            for n, speed_average in self.neighbors(current.data):
                 filho = searchNodes[n]
-                print(speed)
+                print(speed_average)
 
             #for filho in [searchNodes[n] for n , speed in self.neighbors(current.data)]:
 
@@ -120,7 +124,13 @@ class AStar:
                 if filho.closed:
                     continue
 
-                tentative_gscore = current.gscore + self.distance_between(current.data, filho.data)
+                #if(use_speed_average):
+                tentative_gscore = current.gscore + \
+                                   self.cost_between(current.data, filho.data, speed_average) \
+                    if use_speed_average \
+                    else self.distance_between(current.data, filho.data)
+
+                #tentative_gscore = current.gscore + self.distance_between(current.data, filho.data)
 
                 if tentative_gscore >= filho.gscore:
                     continue
@@ -143,7 +153,8 @@ class AStar:
         return None
 
 
-def find_path(start, goal, neighbors_fnct, reversePath=False, heuristic_cost_estimate_fnct=lambda a, b: Infinite, distance_between_fnct=lambda a, b: 1.0):
+def find_path(start, goal, neighbors_fnct, reversePath=False, heuristic_cost_estimate_fnct=lambda a, b: Infinite, distance_between_fnct=lambda a, b: 1.0, use_speed_average=False):
+
     """A non-class version of the path finding algorithm"""
     class FindPath(AStar):
 
@@ -153,13 +164,16 @@ def find_path(start, goal, neighbors_fnct, reversePath=False, heuristic_cost_est
         def distance_between(self, n1, n2):
             return distance_between_fnct(n1, n2)
 
+        def cost_between(self, n1, n2, speed_average):
+            return distance_between_fnct(n1, n2) / speed_average
+
         def neighbors(self, node):
             return neighbors_fnct(node)
 
         def is_goal_reached(self, current, goal):
             return current == goal
 
-    return FindPath().astar(start, goal, reversePath)
+    return FindPath().astar(start, goal, reversePath, use_speed_average=use_speed_average)
 
 
 __all__ = ['AStar', 'find_path']

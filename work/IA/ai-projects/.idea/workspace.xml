@@ -10,17 +10,17 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="DockManager">
-    <window id="3">
+    <window id="4">
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="london.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/search/astar/search-algorithm/london.py">
+            <file leaf-file-name="repair.py" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/ia/mochila/repair.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="305">
-                    <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+                  <state relative-caret-position="273">
+                    <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
                     <folding>
-                      <element signature="e#0#12#0" expanded="true" />
+                      <element signature="e#0#25#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -33,36 +33,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="astar.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/search/astar/search-algorithm/astar.py">
+      <file leaf-file-name="mochila-inspyred.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ia/mochila/mochila-inspyred.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="111" column="28" lean-forward="true" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+            <state relative-caret-position="288">
+              <caret line="54" column="18" lean-forward="true" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
               <folding>
-                <element signature="e#73#112#0" expanded="true" />
-                <element signature="e#3404#3533#0" expanded="false" />
-                <element signature="e#4607#4766#0" expanded="false" />
-                <element signature="e#4809#4930#0" expanded="false" />
+                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#506#681#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cruzamentos.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search/astar/search-algorithm/cruzamentos.csv">
+      <file leaf-file-name="leite-suco.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ce/leite-suco.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rotas.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/search/astar/search-algorithm/rotas.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="1" selection-end-column="3" />
+            <state relative-caret-position="728">
+              <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -95,6 +83,7 @@
       <find>list</find>
       <find>successors</find>
       <find>Chesh</find>
+      <find>fitness</find>
     </findStrings>
     <replaceStrings>
       <replace>Edge</replace>
@@ -125,7 +114,6 @@
         <option value="$PROJECT_DIR$/search/A*/graphcreator.py" />
         <option value="$PROJECT_DIR$/ce/mochila/mochila.py" />
         <option value="$PROJECT_DIR$/ce/aviao.py" />
-        <option value="$PROJECT_DIR$/ce/leite-suco.py" />
         <option value="$PROJECT_DIR$/search/A*/__init__.py" />
         <option value="$PROJECT_DIR$/search/A*/london/london.py" />
         <option value="$PROJECT_DIR$/search/astar2/london/__init__.py" />
@@ -139,15 +127,20 @@
         <option value="$PROJECT_DIR$/search/astar2/london/cruzamentos.csv" />
         <option value="$PROJECT_DIR$/search/astar2/london/rotas.csv" />
         <option value="$PROJECT_DIR$/search/astar2/london/london.py" />
-        <option value="$PROJECT_DIR$/search/astar/search-algorithm/rotas.csv" />
-        <option value="$PROJECT_DIR$/search/astar/search-algorithm/london.py" />
         <option value="$PROJECT_DIR$/search/astar/search-algorithm/astar.py" />
+        <option value="$PROJECT_DIR$/search/astar/search-algorithm/london.py" />
+        <option value="$PROJECT_DIR$/search/astar/search-algorithm/rotas.csv" />
+        <option value="$PROJECT_DIR$/ia/mochila/teste.py" />
+        <option value="$PROJECT_DIR$/ce/leite-suco.py" />
+        <option value="$PROJECT_DIR$/ia/mochila/mochila.py" />
+        <option value="$PROJECT_DIR$/ia/mochila/repair.py" />
+        <option value="$PROJECT_DIR$/ia/mochila/mochila-inspyred.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2223" />
-    <option name="y" value="309" />
+    <option name="x" value="2108" />
+    <option name="y" value="307" />
     <option name="width" value="1004" />
     <option name="height" value="582" />
   </component>
@@ -176,24 +169,18 @@
             <path>
               <item name="ai-projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="ai-projects" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
+              <item name="ce" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ai-projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="ai-projects" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="astar" type="462c0819:PsiDirectoryNode" />
+              <item name="ia" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ai-projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="ai-projects" type="462c0819:PsiDirectoryNode" />
-              <item name="search" type="462c0819:PsiDirectoryNode" />
-              <item name="astar" type="462c0819:PsiDirectoryNode" />
-              <item name="search-algorithm" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ai-projects" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="ia" type="462c0819:PsiDirectoryNode" />
+              <item name="mochila" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -213,6 +200,7 @@
       <recent name="$PROJECT_DIR$/search/A*" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ia" />
       <recent name="$PROJECT_DIR$/search/astar2" />
       <recent name="$PROJECT_DIR$/search/A*/london" />
       <recent name="$PROJECT_DIR$/search/structures" />
@@ -231,106 +219,104 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.london (1)">
-    <configuration name="astar (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.mochila-inspyred">
+    <configuration name="Nosetests in repair.py" type="tests" factoryName="Nosetests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ia/mochila" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ai-projects" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/ia/mochila/repair.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+    </configuration>
+    <configuration name="leite-suco" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/search/astar/search-algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ce" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ai-projects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search/astar/search-algorithm/astar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ce/leite-suco.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="astar" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mochila (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/search/astar2/london" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ia/mochila" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ai-projects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search/astar2/london/astar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ia/mochila/mochila.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="london (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mochila-inspyred" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/search/astar/search-algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ia/mochila" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ai-projects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search/astar/search-algorithm/london.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ia/mochila/mochila-inspyred.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="london" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="teste" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/search/astar2/london" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ia/mochila" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ai-projects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search/astar2/london/london.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/search/A*" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ai-projects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search/A*/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ia/mochila/teste.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.main" />
-      <item index="1" class="java.lang.String" itemvalue="Python.london" />
-      <item index="2" class="java.lang.String" itemvalue="Python.astar" />
-      <item index="3" class="java.lang.String" itemvalue="Python.london (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.astar (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Python.mochila-inspyred" />
+      <item index="1" class="java.lang.String" itemvalue="Python.leite-suco" />
+      <item index="2" class="java.lang.String" itemvalue="Python.teste" />
+      <item index="3" class="java.lang.String" itemvalue="Python.mochila (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Nosetests in repair.py" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.london (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Python.astar (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.london" />
-        <item index="3" class="java.lang.String" itemvalue="Python.astar" />
-        <item index="4" class="java.lang.String" itemvalue="Python.main" />
+        <item index="0" class="java.lang.String" itemvalue="Python.mochila-inspyred" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Nosetests in repair.py" />
+        <item index="2" class="java.lang.String" itemvalue="Python.mochila (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.teste" />
+        <item index="4" class="java.lang.String" itemvalue="Python.leite-suco" />
       </list>
     </recent_temporary>
   </component>
@@ -354,6 +340,18 @@
     <history-entry file="Doctests_in_open_street_maps - 2018.03.24 at 09h 13m 44s.xml">
       <configuration name="Doctests in open_street_maps" configurationId="tests" />
     </history-entry>
+    <history-entry file="Nosetests_in_repair_py - 2018.03.31 at 18h 22m 57s.xml">
+      <configuration name="Nosetests in repair.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_repair_py - 2018.03.31 at 18h 25m 16s.xml">
+      <configuration name="Nosetests in repair.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_repair_py - 2018.03.31 at 18h 30m 20s.xml">
+      <configuration name="Nosetests in repair.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="Nosetests_in_repair_py - 2018.03.31 at 18h 31m 17s.xml">
+      <configuration name="Nosetests in repair.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -372,14 +370,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37407014" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14664586" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11914894" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32199788" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1487779" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1819149" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837406" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35494155" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20403826" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -420,19 +418,19 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/search/astar/search-algorithm/london.py</url>
+          <url>file://$PROJECT_DIR$/ia/search/astar/search-algorithm/london.py</url>
           <line>17</line>
           <option name="timeStamp" value="137" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/search/astar/search-algorithm/astar.py</url>
-          <line>115</line>
-          <option name="timeStamp" value="142" />
+          <url>file://$PROJECT_DIR$/ia/search/astar/search-algorithm/astar.py</url>
+          <line>92</line>
+          <option name="timeStamp" value="157" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/search/astar/search-algorithm/astar.py</url>
-          <line>111</line>
-          <option name="timeStamp" value="152" />
+          <url>file://$PROJECT_DIR$/ce/leite-suco.py</url>
+          <line>37</line>
+          <option name="timeStamp" value="161" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -442,60 +440,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="153" />
+      <option name="time" value="175" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/search/A*/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/astar2/london/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="12" column="25" lean-forward="true" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/astar/search-algorithm/london.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/A*/main.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/A*/structure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/structures/breadth-first-search.py" />
-    <entry file="file://$PROJECT_DIR$/search/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="32" lean-forward="false" selection-start-line="0" selection-start-column="32" selection-end-line="0" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/structures/breadth-first-search.py" />
     <entry file="file://$PROJECT_DIR$/search/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -558,13 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/inspyred/ec/ec.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="379" column="60" lean-forward="false" selection-start-line="379" selection-start-column="60" selection-end-line="379" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ce/aviao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -576,6 +518,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="161">
           <caret line="101" column="4" lean-forward="false" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -591,21 +534,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="166">
           <caret line="168" column="21" lean-forward="false" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ce/leite-suco.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="71" column="0" lean-forward="true" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ce/mochila/mochila.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1742">
-          <caret line="134" column="0" lean-forward="true" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -698,22 +626,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/astar/search-algorithm/cruzamentos.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/astar/search-algorithm/rotas.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="9" lean-forward="false" selection-start-line="0" selection-start-column="9" selection-end-line="1" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/codecs.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
@@ -722,25 +634,139 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/astar/search-algorithm/london.py">
+    <entry file="file://$PROJECT_DIR$/ia/search/astar/search-algorithm/cruzamentos.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
+        <state relative-caret-position="117">
+          <caret line="9" column="9" lean-forward="true" selection-start-line="8" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/search/astar/search-algorithm/rotas.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="45" column="7" lean-forward="true" selection-start-line="45" selection-start-column="7" selection-end-line="45" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/search/astar/search-algorithm/astar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1619">
+          <caret line="167" column="64" lean-forward="false" selection-start-line="167" selection-start-column="51" selection-end-line="167" selection-end-column="64" />
+          <folding>
+            <element signature="e#73#112#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mochila/mochila.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="82" column="23" lean-forward="true" selection-start-line="82" selection-start-column="23" selection-end-line="82" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/search/astar/search-algorithm/london.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="71" column="23" lean-forward="true" selection-start-line="71" selection-start-column="23" selection-end-line="71" selection-end-column="23" />
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/search/astar/search-algorithm/astar.py">
+    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/nose/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="111" column="28" lean-forward="true" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+        <state relative-caret-position="220">
+          <caret line="196" column="0" lean-forward="false" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mochila/teste.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="30" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mochila/repair.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="36" column="43" lean-forward="true" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding>
-            <element signature="e#73#112#0" expanded="true" />
-            <element signature="e#3404#3533#0" expanded="false" />
-            <element signature="e#4607#4766#0" expanded="false" />
-            <element signature="e#4809#4930#0" expanded="false" />
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ce/leite-suco.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/inspyred/ec/ec.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="585" column="42" lean-forward="true" selection-start-line="585" selection-start-column="42" selection-end-line="585" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/inspyred/ec/observers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="90" column="51" lean-forward="true" selection-start-line="90" selection-start-column="51" selection-end-line="90" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mochila/inspyred-knapsack.log.2">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="1029" column="76" lean-forward="true" selection-start-line="1029" selection-start-column="76" selection-end-line="1029" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mochila/inspyred-knapsack.log.1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mochila/inspyred.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mochila/inspyred-knapsack.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1588">
+          <caret line="233" column="85" lean-forward="false" selection-start-line="224" selection-start-column="52" selection-end-line="233" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mochila/mochila-inspyred.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="54" column="18" lean-forward="true" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#506#681#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -35,7 +35,6 @@ ITEMS = [
     , Item(15, 5), Item(40, 25), Item(17, 12), Item(39, 19)
 ]
 
-# Capacity of the knapsack randomized according to number of items
 CAPACITY = 113
 
 # Size of initial population filled with some permutation of 0s and 1s

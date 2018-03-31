@@ -32,9 +32,10 @@ def build_data():
 
     r = csv.reader(open(os.path.join(rootdir, 'rotas.csv')))
     next(r)  # pula a primeira linha (cabeçalho)
-    for id1, id2, speed_average in r:
+    for id1, id2, savg in r:
         id1 = int(id1)
         id2 = int(id2)
+        speed_average = float(savg)
         cruzamentos[id1].links.append((cruzamentos[id2], speed_average))
         #cruzamentos[id2].links.append(cruzamentos[id1])
     return cruzamentos
@@ -52,10 +53,13 @@ def get_cruzamento_by_name(cruzamentos, name):
         return None
 
 
-def get_path(s1, s2):
+def get_path(s1, s2 , use_speed_average=False):
     """ executa a busca A* """
 
+
+
     def distance(n1, n2):
+
         """calcula a distancia entre dois cruzamentos"""
         latA, longA = n1.position
         latB, longB = n2.position
@@ -69,7 +73,7 @@ def get_path(s1, s2):
 
         return math.hypot(x, y)
 
-    return astar.find_path(s1, s2, neighbors_fnct=lambda s: s.links, heuristic_cost_estimate_fnct=distance, distance_between_fnct=distance)
+    return astar.find_path(s1, s2, neighbors_fnct=lambda s: s.links, heuristic_cost_estimate_fnct=distance, distance_between_fnct=distance, use_speed_average=use_speed_average)
 
 
 if __name__ == '__main__':
@@ -78,10 +82,12 @@ if __name__ == '__main__':
 
     station1 = get_cruzamento_by_name(cruzamentos, "A")
     print('Ir de : ' + station1.name)
-    station2 = get_cruzamento_by_name(cruzamentos, "C")
+    station2 = get_cruzamento_by_name(cruzamentos, "M")
     print('Para : ' + station2.name)
     print('-' * 80)
-    path = get_path(station1, station2)
+
+
+    path = get_path(station1, station2, True)
 
     if path:
         for s in path:

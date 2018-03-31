@@ -12,7 +12,7 @@ def generate_candidates(random, args):
 
 def h1(candidate):
     """h1(L,S) = (max{0,(6*L+5*S)/100-60})/15"""
-    return max(0, (6*candidate[0]+5*candidate[1])/100-60)/15
+    return max(0, (6*candidate[0]+5*candidate[1])/100-60) /15
 
 
 def h2(candidate):
@@ -99,3 +99,5 @@ suco = pop[0].candidate[1]
 
 valor = (5*leite)+(4.5*suco)
 print(valor) #680 388  5146
+
+
