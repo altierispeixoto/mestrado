@@ -39,10 +39,10 @@ def generate_candidates(random, args):
 def evaluate_knapsack_candidates(candidate, args):
     total_weight, total_value = knapsack_calc(candidate)
 
-    if total_weight > MAX_CAPACITY:
-        return MAX_CAPACITY - total_weight
-    else:
-        return total_value
+    # if total_weight > MAX_CAPACITY:
+    #     return MAX_CAPACITY - total_weight
+    # else:
+    return total_value
 
 
 def  knapsack_calc(candidate):
@@ -59,12 +59,41 @@ def  knapsack_calc(candidate):
     return total_weight, total_value
 
 
+# def geneRepair(offspring, args):
+#     return list(reversed(offspring))
+#
+# def testReplacer(random, population, parents, offspring, args):
+#     print(list(offspring))
+#     candidate = geneRepair(offspring, args)
+#     print(list(candidate))
+#     # run the real replacer
+#     survivors = inspyred.ec.replacers.generational_replacement(random, population, parents, offspring, args)
+#     return survivors
+
+
+
+def my_replacer(random, population, parents, offspring, args):
+
+    psize = len(population)
+
+    population.sort(reverse=True)
+
+    survivors = population[:psize // 2]
+
+    num_remaining = psize - len(survivors)
+
+    for i in range(num_remaining):
+        survivors.append(random.choice(offspring))
+
+    return survivors
+
+
 rand = random.Random()
 rand.seed(int(time.time()))
 
 #Evolutionary computation representing a canonical genetic algorithm.
 ga            = inspyred.ec.GA(rand)
-
+ga.replacer   = my_replacer
 ga.observer   = inspyred.ec.observers.stats_observer
 ga.terminator = inspyred.ec.terminators.evaluation_termination
 ga.variator   = inspyred.ec.variators.bit_flip_mutation
@@ -79,7 +108,8 @@ final_pop = ga.evolve(evaluator=evaluate_knapsack_candidates,
                       pop_size=100,
                       crossover_rate=1,
                       num_crossover_points=1,
-                      num_bits=42)
+                      num_bits=42
+                      )
 
 final_pop.sort(reverse=True)
 for ind in final_pop:
@@ -89,8 +119,5 @@ for ind in final_pop:
 print("Terminated due to {0}.".format(ga.termination_cause))
 print(final_pop[0])
 
-
-
 total_weight, total_value = knapsack_calc(final_pop[0].candidate)
-
 print("Peso calculado = {} ,  valor calculado = {}".format(total_weight,total_value))
