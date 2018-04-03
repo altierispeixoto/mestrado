@@ -165,15 +165,18 @@ cliente.trips.append(pgt_prl_cnf)
 cliente.trips.append(pgt_prl_cwb)
 
 
-import random as rnd
+import random
+import inspyred
+import time
+import pylab
 
-
-cromossome = []
-
-for trip in cliente.trips:
-    max_truck = rnd.randint(0, trip.max_truck_number_demand_month())
-    cromossome.append(max_truck)
+def generate_candidates(random, args):
+    cromossome = []
+    for trip in cliente.trips:
+        max_truck = random.randint(0, trip.max_truck_number_demand_month())
+        cromossome.append(max_truck)
     #print(c.name, trip.origem, trip.destino, max_truck)
+    return cromossome
 
 #print(list(cromossome))
 
@@ -188,11 +191,69 @@ def fitness(cromossome):
         lucro_viagem = cliente.trips[i].lucro_por_viagem() * cliente.trips[i].max_trips_truck() * gene
         lucro_total += lucro_viagem
         #print("gene {}".format(gene))
-        print(cliente.trips[i].montadora,cliente.trips[i].origem,cliente.trips[i].destino,gene,lucro_viagem )
+        #print(cliente.trips[i].montadora,cliente.trips[i].origem,cliente.trips[i].destino,gene,lucro_viagem )
         if gene > 0:
             cnt_route += 1
+    #print(nr_trucks, lucro_total, cnt_route/28)
+    return lucro_total
 
-    print(nr_trucks, lucro_total, cnt_route/28)
 
-fitness(cromossome)
+def count_vehicle(cromossome):
+    nr_trucks = 0
+    cnt_route = 0
+    for i in range(0, len(cromossome)):
+        gene = cromossome[i]
+        nr_trucks += gene
+        if gene > 0:
+            cnt_route += 1
+    #print(nr_trucks, lucro_total, cnt_route/28)
+    return nr_trucks,cnt_route
 
+
+
+@inspyred.ec.evaluators.evaluator
+def evaluate_trip_candidates(candidate, args):
+    lucro_total = fitness(candidate)
+
+    # if total_weight > MAX_CAPACITY:
+    #     return MAX_CAPACITY - total_weight
+    # else:
+    return lucro_total
+
+
+rand = random.Random()
+rand.seed(int(time.time()))
+
+
+ga            = inspyred.ec.GA(rand)
+
+ga.observer   = [inspyred.ec.observers.stats_observer] #inspyred.ec.observers.plot_observer inspyred.ec.observers.best_observer
+ga.terminator = inspyred.ec.terminators.evaluation_termination
+ga.variator   = inspyred.ec.variators.bit_flip_mutation
+#ga.analysis =  inspyred.ec.analysis.generation_plot("teste.png")
+
+final_pop = ga.evolve(evaluator=evaluate_trip_candidates,
+                      generator=generate_candidates,
+                      max_evaluations=70000,
+                      maximize=True,
+                      mutation_rate=1,
+                      pop_size=15000,
+                      crossover_rate=10,
+                      num_selected=3500,
+                      num_crossover_points=1
+                      )
+
+
+final_pop.sort(reverse=True)
+for ind in final_pop:
+    print(str(ind))
+
+#pop.sort(reverse=True)
+print("Terminated due to {0}.".format(ga.termination_cause))
+print(final_pop[0])
+
+print(count_vehicle(final_pop[0].candidate))
+#total_weight, total_value = knapsack_calc(final_pop[0].candidate)
+#print("Peso calculado = {} ,  valor calculado = {}".format(total_weight,total_value))
+
+pylab.show()
