@@ -9,6 +9,14 @@ class Client:
     def __init__(self):
         self.trips = []
 
+    def print_max_truck_per_trip(self):
+        cnt_max_truck = 0
+
+        for i in self.trips:
+            cnt_max_truck +=  i.max_truck_number_demand_month()
+            print(i.montadora, i.origem,i.destino, i.max_truck_number_demand_month())
+        print(cnt_max_truck)
+
     def __repr__(self):
         print(self.name, list(self.trips))
 
@@ -165,6 +173,9 @@ cliente.trips.append(pgt_prl_cnf)
 cliente.trips.append(pgt_prl_cwb)
 
 
+cliente.print_max_truck_per_trip()
+
+
 import random
 import inspyred
 import time
@@ -207,7 +218,7 @@ def count_vehicle(cromossome):
         if gene > 0:
             cnt_route += 1
     #print(nr_trucks, lucro_total, cnt_route/28)
-    return nr_trucks,cnt_route
+    return nr_trucks, cnt_route, cnt_route/28
 
 
 
@@ -257,3 +268,5 @@ print(count_vehicle(final_pop[0].candidate))
 #print("Peso calculado = {} ,  valor calculado = {}".format(total_weight,total_value))
 
 pylab.show()
+
+
