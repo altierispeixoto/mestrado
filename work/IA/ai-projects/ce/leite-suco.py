@@ -88,7 +88,8 @@ pop = myec.evolve(generator=generate_candidates,
                   num_selected=15,
                   constraint_func=my_constraint_function,
                   mutation_rate=0.5,
-                  max_evaluations=2000)
+                  max_evaluations=2000
+                  )
 
 pop.sort(reverse=True)
 print("Terminated due to {0}.".format(myec.termination_cause))
@@ -99,5 +100,3 @@ suco = pop[0].candidate[1]
 
 valor = (5*leite)+(4.5*suco)
 print(valor) #680 388  5146
-
-

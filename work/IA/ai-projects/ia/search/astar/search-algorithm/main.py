@@ -37,7 +37,6 @@ def build_data():
         id2 = int(id2)
         speed_average = float(savg)
         cruzamentos[id1].links.append((cruzamentos[id2], speed_average))
-        #cruzamentos[id2].links.append(cruzamentos[id1])
     return cruzamentos
 
 

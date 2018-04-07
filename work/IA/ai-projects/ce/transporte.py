@@ -1,6 +1,9 @@
 import math
 
 
+# mersenne twister
+# aimotion.blogspot
+
 def ifzero(n):
     return 1 if n == 0 else n
 
@@ -40,7 +43,9 @@ class Trip:
         self.remuneracao_por_viagem = remuneracao_por_viagem
 
     def time_trip(self):
-        return math.ceil((self.distancia/Trip.SPEED_AVERAGE_LOADED) + (self.distancia/Trip.SPEED_AVERAGE_UNLOADED) + Trip.NUMBER_HOURS_LOAD + Trip.NUMBER_HOURS_UNLOAD)
+        return math.ceil((self.distancia/Trip.SPEED_AVERAGE_LOADED) +
+                         (self.distancia/Trip.SPEED_AVERAGE_UNLOADED) +
+                         Trip.NUMBER_HOURS_LOAD + Trip.NUMBER_HOURS_UNLOAD)
 
     def max_trip_demand(self):
         return math.floor(self.qtd_veiculos/Trip.MAX_VEHICLE_TRIP)
@@ -67,9 +72,9 @@ class Trip:
 
         while True:
             total_trip_attended += max_trip_truck
+            max_truck_demand += 1
             if total_trip_attended > max_trip_demand_month:
                 break
-            max_truck_demand += 1
         return ifzero(max_truck_demand)
 
     def lucro_por_viagem(self):
@@ -204,7 +209,12 @@ def fitness(cromossome):
         #print("gene {}".format(gene))
         #print(cliente.trips[i].montadora,cliente.trips[i].origem,cliente.trips[i].destino,gene,lucro_viagem )
         if gene > 0:
-            cnt_route += 1
+           cnt_route += 1
+
+    if nr_trucks > 70:
+        lfit = lucro_total/nr_trucks
+        rfit = lfit*(nr_trucks-70)
+        return lucro_total - (rfit*1.8)
     #print(nr_trucks, lucro_total, cnt_route/28)
     return lucro_total
 
@@ -233,31 +243,36 @@ def evaluate_trip_candidates(candidate, args):
 
 
 rand = random.Random()
-rand.seed(int(time.time()))
+seed = int(time.time())
+
+#seed = 1522887662 # (70, 23, 0.8214285714285714) 11.295.727
+
+
+rand.seed(seed)
 
 
 ga            = inspyred.ec.GA(rand)
 
 ga.observer   = [inspyred.ec.observers.stats_observer] #inspyred.ec.observers.plot_observer inspyred.ec.observers.best_observer
 ga.terminator = inspyred.ec.terminators.evaluation_termination
-ga.variator   = inspyred.ec.variators.bit_flip_mutation
+#ga.variator   = inspyred.ec.variators.bit_flip_mutation
 #ga.analysis =  inspyred.ec.analysis.generation_plot("teste.png")
 
 final_pop = ga.evolve(evaluator=evaluate_trip_candidates,
                       generator=generate_candidates,
-                      max_evaluations=70000,
-                      maximize=True,
+                      max_evaluations=500,
                       mutation_rate=1,
-                      pop_size=15000,
-                      crossover_rate=10,
-                      num_selected=3500,
+                      pop_size=80,
+                      crossover_rate=1,
+                      num_selected=30,
                       num_crossover_points=1
                       )
 
 
-final_pop.sort(reverse=True)
-for ind in final_pop:
-    print(str(ind))
+#final_pop.sort(reverse=True)
+#for ind in final_pop:
+#    print(str(ind))
+
 
 #pop.sort(reverse=True)
 print("Terminated due to {0}.".format(ga.termination_cause))
@@ -269,4 +284,5 @@ print(count_vehicle(final_pop[0].candidate))
 
 pylab.show()
 
+print("seed = {} ".format(seed))
 
