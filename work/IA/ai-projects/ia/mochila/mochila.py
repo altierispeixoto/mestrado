@@ -111,9 +111,10 @@ def ga_mochila(ga, method):
                           maximize=True,
                           num_elites = 5,
                           mutation_rate=0.05,
+                          crossover_rate=0.5,
                           pop_size=200,
                           num_selected=50,
-                          crossover_rate=0.5,
+
                           num_crossover_points=1,
                           num_bits=42)
 
@@ -161,10 +162,10 @@ if __name__ == "__main__":
 
     start_time = datetime.now()
 
-    execution_type = 'repair'
+    execution_type = 'penalize'
     ga, seed = setup_ga()
 
-    for i in range(1, 1000):
+    for i in range(0, 300):
         if execution_type == 'repair':
             ga.replacer = my_replacer
             total_values.append(ga_mochila(ga, evaluate_knapsack_candidates_repair))

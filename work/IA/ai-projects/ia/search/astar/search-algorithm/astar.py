@@ -1,20 +1,15 @@
 # -*- coding: utf-8 -*-
-""" generic A-Star path searching algorithm """
 
-from abc import ABCMeta, abstractmethod
+from abc import abstractmethod
 from heapq import heappush, heappop
+
 
 
 Infinite = float('inf')
 
-
 class AStar:
-    __metaclass__ = ABCMeta
-    __slots__ = ()
 
     class SearchNode:
-        __slots__ = ('data', 'gscore', 'fscore',
-                     'closed', 'came_from', 'out_openset')
 
         def __init__(self, data, gscore=Infinite, fscore=Infinite):
             self.data = data
@@ -27,7 +22,6 @@ class AStar:
         def __lt__(self, b):
             return self.fscore < b.fscore
 
-
     class SearchNodeDict(dict):
 
         def __missing__(self, k):
@@ -36,16 +30,13 @@ class AStar:
             return v
 
     @abstractmethod
-    def heuristic_cost_estimate(self, current, goal):
-        """Computes the estimated (rough) distance between a node and the goal,
-         this method must be implemented in a subclass. The second parameter is always the goal."""
+    def heuristic_cost_estimate(self, current, goal, speed_average):
+        """Metodo de heuristica para avaliação do tempo estimado da rota"""
         raise NotImplementedError
 
     @abstractmethod
     def distance_between(self, n1, n2):
-        """Gives the real distance between two adjacent nodes n1 and n2 (i.e n2 belongs to the list of n1's neighbors).
-           n2 is guaranteed to belong to the list returned by the call to neighbors(n1).
-           This method must be implemented in a subclass."""
+        """Método de heurística para cálculo da distancia entre cruzamentos"""
         raise NotImplementedError
 
     @abstractmethod
@@ -54,12 +45,11 @@ class AStar:
 
     @abstractmethod
     def neighbors(self, node):
-        """For a given node, returns (or yields) the list of its neighbors.
-         this method must be implemented in a subclass"""
+        """Retorna os filhos de um nó."""
         raise NotImplementedError
 
     def is_goal_reached(self, current, goal):
-        """ returns true when we can consider that 'current' is the goal"""
+        """ retorna true quando o destino é alcançado"""
         return current == goal
 
     def reconstruct_path(self, last, reversePath=False):
@@ -73,8 +63,9 @@ class AStar:
         else:
             return reversed(list(_gen()))
 
-    def astar(self, start, goal, reversePath=False,use_speed_average=False):
+    def astar(self, start, goal, reversepath=False, use_speed_average=False):
 
+        SPEED_AVERAGE_OVERALL=66.6
         closed_list = set()
         child_not_openset = set()
 
@@ -82,7 +73,13 @@ class AStar:
             return [start]
 
         searchNodes = AStar.SearchNodeDict()
-        startNode = searchNodes[start] = AStar.SearchNode(start, gscore=.0, fscore=self.heuristic_cost_estimate(start, goal))
+
+        if use_speed_average:
+            startNode = searchNodes[start] = AStar.SearchNode(start, gscore=.0, fscore=self.heuristic_cost_estimate(start, goal, SPEED_AVERAGE_OVERALL))
+        else:
+            startNode = searchNodes[start] = AStar.SearchNode(start, gscore=.0,
+                                                              fscore=self.distance_between(start, goal))
+
         openSet = []
         heappush(openSet, startNode)
         while openSet:
@@ -96,7 +93,7 @@ class AStar:
 
             if self.is_goal_reached(current.data, goal):
                 print("O objetivo foi alcançado {}".format(current.data.name))
-                return self.reconstruct_path(current, reversePath)
+                return self.reconstruct_path(current, reversepath)
 
             current.out_openset = True
             current.closed = True
@@ -104,59 +101,66 @@ class AStar:
 
             for n, speed_average in self.neighbors(current.data):
                 filho = searchNodes[n]
-                print(speed_average)
-
-            #for filho in [searchNodes[n] for n , speed in self.neighbors(current.data)]:
 
                 print("Estado do filho {}, Já explorado = {}".format(filho.data.name, filho.closed))
-                print("f({}) = {}".format(filho.data.name, filho.fscore))
-                print("g({}) = {}".format(filho.data.name, filho.fscore))
 
                 if filho.closed:
                     continue
 
-                #if(use_speed_average):
-                tentative_gscore = current.gscore + \
-                                   self.cost_between(current.data, filho.data, speed_average) \
-                    if use_speed_average \
-                    else self.distance_between(current.data, filho.data)
-
-                #tentative_gscore = current.gscore + self.distance_between(current.data, filho.data)
+                nanl = 0
+                if use_speed_average:
+                    nanl = self.heuristic_cost_estimate(current.data, filho.data, speed_average)
+                    tentative_gscore = current.gscore + self.heuristic_cost_estimate(current.data, filho.data, speed_average)
+                else:
+                    nanl = self.distance_between(current.data, filho.data)
+                    tentative_gscore = current.gscore + self.distance_between(current.data, filho.data)
 
                 if tentative_gscore >= filho.gscore:
                     continue
 
                 filho.came_from = current
                 filho.gscore = tentative_gscore
-                filho.fscore = tentative_gscore + self.heuristic_cost_estimate(filho.data, goal)
+                hscore=0
+                if use_speed_average:
+                    hscore = self.heuristic_cost_estimate(filho.data, goal, SPEED_AVERAGE_OVERALL)
+                    filho.fscore = tentative_gscore + hscore
+                else:
+                    hscore = self.distance_between(filho.data, goal)
+                    filho.fscore = tentative_gscore + hscore
+
+                print("f({}) = {}".format(filho.data.name, filho.fscore))
+                print("g({}) = {}".format(filho.data.name, tentative_gscore))
+                print("c({}, a, {})({}) = {}".format(current.data.name,filho.data.name, filho.data.name, nanl))
+                print("h({}) = {}".format(filho.data.name, hscore))
 
                 if filho.out_openset:
                     filho.out_openset = False
                     heappush(openSet, filho)
-                    print("Filho {} foi adicionado a froteira.".format(filho.data.name))
+                    print("Filho {} foi adicionado a fronteira.".format(filho.data.name))
                 else:
                     child_not_openset.add(filho)
-                    print("Filho {} não foi adicionado a froteira.".format(filho.data.name))
-
+                    print("Filho {} não foi adicionado a fronteira.".format(filho.data.name))
+                print("------------------------------------------------------------------")
             print("Quantidade total de nós explorados {}".format(closed_list.__len__() + openSet.__len__() + child_not_openset.__len__()))
             print("Tamanho da fronteira {}".format(openSet.__len__()))
-
+            print("------------------------------------------------------------------")
         return None
 
 
-def find_path(start, goal, neighbors_fnct, reversePath=False, heuristic_cost_estimate_fnct=lambda a, b: Infinite, distance_between_fnct=lambda a, b: 1.0, use_speed_average=False):
+def find_path(start, goal, neighbors_fnct,
+              reversepath=False,
+              heuristic_cost_estimate_fnct=lambda a, b: Infinite,
+              distance_between_fnct=lambda a, b: 1.0,
+              use_speed_average=False):
 
-    """A non-class version of the path finding algorithm"""
+
     class FindPath(AStar):
 
-        def heuristic_cost_estimate(self, current, goal):
-            return heuristic_cost_estimate_fnct(current, goal)
+        def heuristic_cost_estimate(self, current, goal, speed_average):
+            return heuristic_cost_estimate_fnct(current, goal,speed_average)
 
         def distance_between(self, n1, n2):
             return distance_between_fnct(n1, n2)
-
-        def cost_between(self, n1, n2, speed_average):
-            return distance_between_fnct(n1, n2) / speed_average
 
         def neighbors(self, node):
             return neighbors_fnct(node)
@@ -164,7 +168,4 @@ def find_path(start, goal, neighbors_fnct, reversePath=False, heuristic_cost_est
         def is_goal_reached(self, current, goal):
             return current == goal
 
-    return FindPath().astar(start, goal, reversePath, use_speed_average=use_speed_average)
-
-
-__all__ = ['AStar', 'find_path']
+    return FindPath().astar(start, goal, reversepath, use_speed_average=use_speed_average)
