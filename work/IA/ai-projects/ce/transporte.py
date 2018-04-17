@@ -204,7 +204,6 @@ def fitness(cromossome):
 
             max_viagens = gene * cliente.rotas[i].max_viagens_caminhao()
             demanda = cliente.rotas[i].demanda_viagens()
-            max_viagens_caminhao = cliente.rotas[i].max_viagens_caminhao()
             lucro_por_viagem = cliente.rotas[i].lucro_por_viagem()
             # print("Max viagens caminhao {}".format(cliente.rotas[i].max_viagens_caminhao()))
             # print("Max viagens {}".format(max_viagens))
@@ -245,14 +244,14 @@ def evaluate_trip_candidates(candidate, args):
 
 def setup_ga():
 
-    seed = int(time.time())
-    #seed = 1523831809
+    #seed = int(time.time())
+    seed = 1523840859
     rand = random.Random()
     rand.seed(seed)
 
     # Evolutionary computation representing a canonical genetic algorithm.
     ga = inspyred.ec.GA(rand)
-    #ga.observer = [inspyred.ec.observers.stats_observer]  # inspyred.ec.observers.plot_observer inspyred.ec.observers.best_observer
+    ga.observer = [inspyred.ec.observers.stats_observer]  # inspyred.ec.observers.plot_observer inspyred.ec.observers.best_observer
 
     # condição de término pelo máximo de avaliações
     ga.terminator = inspyred.ec.terminators.evaluation_termination
@@ -269,7 +268,7 @@ def ga_transporte(ga):
 
     final_pop = ga.evolve(evaluator=evaluate_trip_candidates,
                           generator=generate_candidates,
-                          max_evaluations=3300,
+                          max_evaluations=3400,
                           mutation_rate=0.8,
                           pop_size=200,
                           crossover_rate=0.9,
@@ -303,11 +302,8 @@ if __name__ == "__main__":
     from datetime import datetime
 
     start_time = datetime.now()
-
-
-    for i in range(0, 1000):
-        ga, seed = setup_ga()
-        total_values.append(ga_transporte(ga))
+    ga, seed = setup_ga()
+    total_values.append(ga_transporte(ga))
 
     print(frequencyDistribution(total_values))
     time_elapsed = datetime.now() - start_time
