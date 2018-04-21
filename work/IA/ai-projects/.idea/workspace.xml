@@ -11,33 +11,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="transporte.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ce/transporte.py">
+      <file leaf-file-name="fuzzy-classifier.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ia/fuzzy/fuzzy-classifier.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="220" column="63" lean-forward="true" selection-start-line="220" selection-start-column="24" selection-end-line="220" selection-end-column="63" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="leite-suco.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ce/leite-suco.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="202">
+              <caret line="66" column="50" lean-forward="true" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#46#64#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ec.py" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/inspyred/ec/ec.py">
+      <file leaf-file-name="predicted.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ia/fuzzy/predicted.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="656" column="7" lean-forward="true" selection-start-line="656" selection-start-column="7" selection-end-line="656" selection-end-column="7" />
+            <state relative-caret-position="169">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -49,16 +39,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>weig</find>
-      <find>, '</find>
-      <find>list</find>
-      <find>successors</find>
-      <find>Chesh</find>
       <find>fitness</find>
       <find>mutatio</find>
       <find>eli</find>
@@ -84,6 +70,11 @@
       <find>-</find>
       <find>9250626</find>
       <find>pop</find>
+      <find>,</find>
+      <find>;</find>
+      <find>moment</find>
+      <find>bat</find>
+      <find>activation</find>
     </findStrings>
     <replaceStrings>
       <replace>Edge</replace>
@@ -92,16 +83,13 @@
       <replace />
       <replace>))</replace>
       <replace>50</replace>
-      <replace>,</replace>
       <replace>rotas</replace>
+      <replace>,</replace>
     </replaceStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/search/data-structure.py" />
-        <option value="$PROJECT_DIR$/search/graph.py" />
-        <option value="$PROJECT_DIR$/search/vertex.py" />
         <option value="$PROJECT_DIR$/search/graph-structure.py" />
         <option value="$PROJECT_DIR$/search/graphstructure.py" />
         <option value="$PROJECT_DIR$/search/__init__.py" />
@@ -145,6 +133,14 @@
         <option value="$PROJECT_DIR$/ia/mochila/items.py" />
         <option value="$PROJECT_DIR$/ia/mochila/mochila.py" />
         <option value="$PROJECT_DIR$/ce/transporte.py" />
+        <option value="$PROJECT_DIR$/ce/pg/industrial_activity.csv" />
+        <option value="$PROJECT_DIR$/ce/pg/test_data.csv" />
+        <option value="$PROJECT_DIR$/ce/pg/train_data.csv" />
+        <option value="$PROJECT_DIR$/ce/pg/forecasting.py" />
+        <option value="$PROJECT_DIR$/ce/pg/t.ipynb" />
+        <option value="$PROJECT_DIR$/ia/mlp/neural-network.py" />
+        <option value="$PROJECT_DIR$/ia/mlp/neural-network.ipynb" />
+        <option value="$PROJECT_DIR$/ia/fuzzy/fuzzy-classifier.py" />
       </list>
     </option>
   </component>
@@ -185,13 +181,25 @@
             <path>
               <item name="ai-projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="ai-projects" type="462c0819:PsiDirectoryNode" />
+              <item name="ce" type="462c0819:PsiDirectoryNode" />
+              <item name="pg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ai-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ai-projects" type="462c0819:PsiDirectoryNode" />
               <item name="ia" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ai-projects" type="b2602c69:ProjectViewProjectNode" />
               <item name="ai-projects" type="462c0819:PsiDirectoryNode" />
               <item name="ia" type="462c0819:PsiDirectoryNode" />
-              <item name="mochila" type="462c0819:PsiDirectoryNode" />
+              <item name="fuzzy" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ai-projects" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ai-projects" type="462c0819:PsiDirectoryNode" />
+              <item name="ia" type="462c0819:PsiDirectoryNode" />
+              <item name="mlp" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -204,16 +212,17 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/altieris/Documentos/mestrado/artificial-intelligence/ai-projects/ce/leite-suco.py" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ia/mlp" />
+      <recent name="$PROJECT_DIR$/search/astar2/london" />
+      <recent name="$PROJECT_DIR$/search/A*" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/ce/ag" />
       <recent name="$PROJECT_DIR$/ia/mochila/testes" />
       <recent name="$PROJECT_DIR$/ia" />
       <recent name="$PROJECT_DIR$/search/astar2" />
       <recent name="$PROJECT_DIR$/search/A*/london" />
-      <recent name="$PROJECT_DIR$/search/structures" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/search/astar2/london" />
-      <recent name="$PROJECT_DIR$/search/A*" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -228,54 +237,37 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.transporte">
-    <configuration name="astar" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.fuzzy-classifier">
+    <configuration name="forecasting" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ia/search/astar/search-algorithm" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ce/pg" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ai-projects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ia/search/astar/search-algorithm/astar.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ce/pg/forecasting.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="items" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="fuzzy-classifier" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ia/mochila" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ia/fuzzy" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ai-projects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ia/mochila/items.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-    </configuration>
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ia/search/astar/search-algorithm" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="ai-projects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ia/search/astar/search-algorithm/main.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ia/fuzzy/fuzzy-classifier.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -297,6 +289,23 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="neural-network" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ia/mlp" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ai-projects" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ia/mlp/neural-network.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
     <configuration name="transporte" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -309,25 +318,25 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="ai-projects" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ce/transporte.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ce/ag/transporte.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Python.mochila-reparacao" />
-      <item index="1" class="java.lang.String" itemvalue="Python.main" />
-      <item index="2" class="java.lang.String" itemvalue="Python.astar" />
-      <item index="3" class="java.lang.String" itemvalue="Python.items" />
-      <item index="4" class="java.lang.String" itemvalue="Python.transporte" />
+      <item index="1" class="java.lang.String" itemvalue="Python.transporte" />
+      <item index="2" class="java.lang.String" itemvalue="Python.forecasting" />
+      <item index="3" class="java.lang.String" itemvalue="Python.neural-network" />
+      <item index="4" class="java.lang.String" itemvalue="Python.fuzzy-classifier" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.transporte" />
-        <item index="1" class="java.lang.String" itemvalue="Python.mochila-reparacao" />
-        <item index="2" class="java.lang.String" itemvalue="Python.items" />
-        <item index="3" class="java.lang.String" itemvalue="Python.main" />
-        <item index="4" class="java.lang.String" itemvalue="Python.astar" />
+        <item index="0" class="java.lang.String" itemvalue="Python.fuzzy-classifier" />
+        <item index="1" class="java.lang.String" itemvalue="Python.neural-network" />
+        <item index="2" class="java.lang.String" itemvalue="Python.forecasting" />
+        <item index="3" class="java.lang.String" itemvalue="Python.transporte" />
+        <item index="4" class="java.lang.String" itemvalue="Python.mochila-reparacao" />
       </list>
     </recent_temporary>
   </component>
@@ -392,15 +401,15 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43361345" sideWeight="0.5030166" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08907563" sideWeight="0.4969834" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34325185" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24660634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39327732" sideWeight="0.4969834" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34285715" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24660634" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32837406" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33049947" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19495799" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46757165" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -441,7 +450,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/ce/leite-suco.py</url>
+          <url>file://$PROJECT_DIR$/ce/ag/leite-suco.py</url>
           <line>37</line>
           <option name="timeStamp" value="161" />
         </line-breakpoint>
@@ -455,6 +464,16 @@
           <line>53</line>
           <option name="timeStamp" value="199" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ia/fuzzy/fuzzy-classifier.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="238" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ia/fuzzy/fuzzy-classifier.py</url>
+          <line>49</line>
+          <option name="timeStamp" value="239" />
+        </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
@@ -463,52 +482,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="223" />
+      <option name="time" value="240" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/search/structures/datastructure.py" />
-    <entry file="file://$PROJECT_DIR$/search/structures/graphstructure.py" />
-    <entry file="file://$PROJECT_DIR$/ce/teste.py" />
-    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/inspyred/benchmarks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="1042" column="31" lean-forward="false" selection-start-line="1042" selection-start-column="23" selection-end-line="1042" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/inspyred/ec/replacers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="101" column="4" lean-forward="false" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2017.2/system/python_stubs/1499864118/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="802" column="8" lean-forward="false" selection-start-line="802" selection-start-column="8" selection-end-line="802" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/search/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/search/astar2/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/search/astar2/london/__init__.py" />
-    <entry file="file://$PROJECT_DIR$/search/astar2/london/main.py" />
-    <entry file="file://$PROJECT_DIR$/search/A*/astar.py" />
-    <entry file="file://$PROJECT_DIR$/search/astar2/london/teste.py" />
-    <entry file="file://$PROJECT_DIR$/search/A*/main.py" />
-    <entry file="file://$PROJECT_DIR$/search/astar2/london/underground_lines.csv" />
-    <entry file="file://$PROJECT_DIR$/search/A*/graphcreator.py" />
-    <entry file="file://$PROJECT_DIR$/search/A*/structure.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydevd_bundle/pydevd_exec2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/nose/case.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
@@ -535,13 +513,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/ia/search/astar/search-algorithm/london.py" />
-    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="308" column="0" lean-forward="false" selection-start-line="308" selection-start-column="0" selection-end-line="308" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/inspyred/ec/variators/crossovers.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="131">
@@ -708,20 +679,166 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ce/transporte.py">
+    <entry file="file://$PROJECT_DIR$/ce/ag/leite-suco.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="220" column="63" lean-forward="true" selection-start-line="220" selection-start-column="24" selection-end-line="220" selection-end-column="63" />
+        <state relative-caret-position="224">
+          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ce/leite-suco.py">
+    <entry file="file://$PROJECT_DIR$/ce/ag/transporte.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="38" column="0" lean-forward="true" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state relative-caret-position="148">
+          <caret line="203" column="0" lean-forward="true" selection-start-line="203" selection-start-column="0" selection-end-line="203" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ce/pg/test_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ce/pg/train_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="178">
+          <caret line="131" column="12" lean-forward="true" selection-start-line="131" selection-start-column="12" selection-end-line="131" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/deap/algorithms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2136">
+          <caret line="95" column="50" lean-forward="true" selection-start-line="95" selection-start-column="50" selection-end-line="95" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="310" column="0" lean-forward="false" selection-start-line="310" selection-start-column="0" selection-end-line="310" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/deap/gp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="580" column="54" lean-forward="false" selection-start-line="580" selection-start-column="15" selection-end-line="580" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ce/pg/forecasting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="74" column="30" lean-forward="true" selection-start-line="74" selection-start-column="30" selection-end-line="74" selection-end-column="30" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#0#15#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ce/pg/t.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mlp/dados_autent_bancaria.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/fuzzy/test-fuzzy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#11#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/pandas/core/panel.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1344">
+          <caret line="872" column="8" lean-forward="false" selection-start-line="872" selection-start-column="8" selection-end-line="872" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/sklearn/model_selection/_split.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1196">
+          <caret line="1943" column="0" lean-forward="true" selection-start-line="1943" selection-start-column="0" selection-end-line="1943" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/sklearn/neural_network/multilayer_perceptron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2320">
+          <caret line="886" column="17" lean-forward="false" selection-start-line="886" selection-start-column="17" selection-end-line="886" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mlp/neural-network.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/tools/anaconda3/lib/python3.6/site-packages/skfuzzy/cluster/_cmeans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="292" column="42" lean-forward="false" selection-start-line="292" selection-start-column="18" selection-end-line="292" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/fuzzy/dados_autent_bancaria.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="31" column="29" lean-forward="true" selection-start-line="31" selection-start-column="29" selection-end-line="31" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/mlp/neural-network.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="26">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/fuzzy/predicted.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="169">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ia/fuzzy/fuzzy-classifier.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="66" column="50" lean-forward="true" selection-start-line="66" selection-start-column="50" selection-end-line="66" selection-end-column="50" />
+          <folding>
+            <element signature="e#46#64#0" expanded="true" />
           </folding>
         </state>
       </provider>

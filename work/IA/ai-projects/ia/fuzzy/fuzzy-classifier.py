@@ -1,10 +1,9 @@
-import numpy as np
-import matplotlib.pyplot as plt
-import skfuzzy as fuzz
-import seaborn as sns
+#  Fuzzy C-means clustering (FCM) Algorithm.
 
+import numpy as np
+import skfuzzy as fuzz
+from sklearn.model_selection import train_test_split
 import pandas as pd
-from io import StringIO
 
 data_types = {
     "wti_variance": "float",
@@ -18,21 +17,57 @@ columns = ["wti_variance", "wti_skewness", "wti_curtosis", "image_entropy", "cla
 dataset = pd.read_csv("dados_autent_bancaria.txt", dtype=data_types, names=columns)
 print(dataset.head())
 
-
 print(dataset.groupby('class').count())
 
+X = dataset.drop('class', axis=1)
+y = dataset['class']
+
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
 
 # Cluster using correct number of clusters (3)
-cntr, U, U0, d, Jm, p, fpc = fuzz.cluster.cmeans(data=dataset, c=3, m=5, error=0.005, maxiter=1000, init=None)
+cntr, U, U0, d, Jm, p, fpc = fuzz.cluster.cmeans(data=X_train.transpose(), c=2, m=2, error=0.0005, maxiter=1000, init=None,seed=42)
 
 print("centers")
 print(cntr)
 
-# Predict fuzzy memberships, U, for all points in test_data
-U, _, _, _, _, fpc = fuzz.cluster.cmeans_predict(
-    dataset.drop('class', axis=1), cntr, m=4, error=0.005, maxiter=1000, seed=1234)
-
-print("predicted")
+print("Data trained")
 print(U)
 
+labels = [np.argmax(elem) for elem in U.transpose()]
+print("Labels")
+print(labels)
+
+# Predict fuzzy memberships, U, for all points in test_data
+U, _, _, _, _, fpc = fuzz.cluster.cmeans_predict(
+    X_test.transpose(), cntr, m=2, error=0.0005, maxiter=1000, seed=1234)
+
+
+labels = [np.argmax(elem) for elem in U.transpose()]
+clusters = pd.Series(labels)
+cluster_membership_0 = pd.Series(U[0])
+cluster_membership_1 = pd.Series(U[1])
+
 print("FPC = {}".format(fpc))
+
+
+#X_test['cluster_membership_1'] = cluster_membership_1.values
+#X_test['class'] = y_test
+#X_test['cluster'] = clusters.values
+
+X_test = X_test.assign(cluster_membership_0=cluster_membership_0.values)
+X_test = X_test.assign(cluster_membership_1=cluster_membership_1.values)
+X_test = X_test.assign(classe=y_test)
+X_test = X_test.assign(cluster=clusters.values)
+
+predicted_dataset = pd.DataFrame(X_test)
+
+print(predicted_dataset.head(10))
+
+
+[[ 0.9729594   5.71715338 -1.02759706 -1.96884236] [-0.30046973 -4.1061926   5.4989849  -0.13756034]]
+
+
+predicted_dataset.to_csv("predicted.csv",encoding='utf-8',index=False)
+
+4.6352             ,-3.0087  ,2.6773,1.212   ,0.23764512063159723 ,0.7623548793684027,0,1
+0.46901000000000004,-0.63321 ,7.3848,0.36507 ,0.12353842274118615 ,0.8764615772588138,0,1
