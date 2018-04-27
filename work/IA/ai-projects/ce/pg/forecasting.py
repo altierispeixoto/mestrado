@@ -18,15 +18,20 @@ test_data =  pd.read_csv("test_data.csv")
 print(test_data.shape)
 
 # Define new functions
+#def protectedDiv(left, right):
+#    with numpy.errstate(divide='ignore',invalid='ignore'):
+#        x = numpy.divide(left, right)
+#        if isinstance(x, numpy.ndarray):
+#            x[numpy.isinf(x)] = 1
+#            x[numpy.isnan(x)] = 1
+#        elif numpy.isinf(x) or numpy.isnan(x):
+#            x = 1
+#    return x
+
 def protectedDiv(left, right):
-    with numpy.errstate(divide='ignore',invalid='ignore'):
-        x = numpy.divide(left, right)
-        if isinstance(x, numpy.ndarray):
-            x[numpy.isinf(x)] = 1
-            x[numpy.isnan(x)] = 1
-        elif numpy.isinf(x) or numpy.isnan(x):
-            x = 1
-    return x
+    try: return left / right
+    except ZeroDivisionError: return 1
+
 
 pset = gp.PrimitiveSet("MAIN", 12)
 
@@ -64,11 +69,13 @@ toolbox.register("compile", gp.compile, pset=pset)
 
 
 
+def rmse(predictions, targets):
+    return np.sqrt(((predictions - targets) ** 2).mean())
+
 def evalSymbReg(individual):
+
     # Transform the tree expression in a callable function
     func = toolbox.compile(expr=individual)
-    # Evaluate the sum of squared difference between the expression
-    # and the real function values : x**4 + x**3 + x**2 + x
 
     diff = 0
     i = 0
@@ -89,7 +96,8 @@ def evalSymbReg(individual):
         x12 = train_data.iloc[i + 11]['industrial_activity']
         y = train_data.iloc[i + 12]['industrial_activity']
         i += i + 12
-        diff += numpy.sum((func(x1,x2,x3,x4,x5,x6,x7,x8,x9,x10,x11,x12) - y) ** 2)
+
+        diff += numpy.sum((func(x1, x2, x3, x4, x5, x6, x7, x8, x9, x10, x11, x12) - y) ** 2)
 
     return diff,
 
@@ -108,7 +116,7 @@ def main():
     random.seed(318)
 
     pop = toolbox.population(n=500)
-    hof = tools.HallOfFame(1)
+    hof = tools.HallOfFame(5)
     stats = tools.Statistics(lambda ind: ind.fitness.values)
     stats.register("avg", numpy.mean)
     stats.register("std", numpy.std)
